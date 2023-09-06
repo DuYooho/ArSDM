@@ -1,0 +1,8 @@
+pytorch-lightning==1.4.0
+torchmetrics==0.5
+omegaconf
+einops
+tqdm
+albumentations
+pandas
+natsort

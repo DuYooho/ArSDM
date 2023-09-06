@@ -1,0 +1,95 @@
+exp:
+  exp_name: ArSDM_base
+  train: True
+  resume: None
+  seed: 23
+  logdir: None
+  scale_lr: True
+
+model:
+  base_learning_rate: 1.0e-06
+  target: ddpm.ArSDM
+  params:
+    monitor: val/loss_simple_ema
+    linear_start: 0.0015
+    linear_end: 0.0205
+    log_every_t: 100
+    timesteps: 1000
+    loss_type: l1
+    first_stage_key: image
+    cond_stage_key: segmentation
+    image_size: 384
+    channels: 3
+
+    unet_config:
+      target: guided_diffusion.unet.UNetModel
+      params:
+        image_size: 384
+        in_channels: 3
+        out_channels: 3
+        model_channels: 256
+        num_res_blocks: 2
+        attention_resolutions:
+          - 8
+          - 16
+          - 32
+
+        channel_mult:
+          - 1
+          - 1
+          - 2
+          - 2
+          - 4
+          - 4
+
+        dropout: 0
+        num_classes: 2
+        use_checkpoint: true
+        use_fp16: false
+        num_heads: 1
+        num_head_channels: 64
+        num_heads_upsample: -1
+        use_scale_shift_norm: ture
+        resblock_updown: true
+        use_new_attention_order: false
+
+data:
+  target: main.DataModuleFromConfig
+  params:
+    batch_size: 8
+    num_workers: 0
+    wrap: false
+    train:
+      target: datasets.polyp.PolypBase
+      params:
+        name: ${train_data_dir}  # train_data_dir
+        size: 384
+
+    validation:
+      target: datasets.polyp.PolypBase
+      params:
+        name: ${test_data_dir}  # test_data_dir
+        size: 384
+
+
+lightning:
+  callbacks:
+    image_logger:
+      target: main.ImageLogger
+      params:
+        batch_frequency: 500
+        max_images: 8
+        increase_log_steps: False
+
+  logger:
+    tensorboard:
+      target: pytorch_lightning.loggers.TensorBoardLogger
+
+  trainer:
+    benchmark: True
+    accumulate_grad_batches: 1
+    num_nodes: 1
+    max_epochs: 100
+    check_val_every_n_epoch: 1
+    accelerator: gpu
+    devices: 0,
