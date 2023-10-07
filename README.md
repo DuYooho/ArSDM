@@ -107,12 +107,12 @@ This project is built upon the foundations of several open-source codebases, inc
 ## Citations
 If you find **ArSDM** useful for your research, please consider citing our paper:
 ```angular2
-@misc{du2023arsdm,
-      title={ArSDM: Colonoscopy Images Synthesis with Adaptive Refinement Semantic Diffusion Models}, 
-      author={Yuhao Du and Yuncheng Jiang and Shuangyi Tan and Xusheng Wu and Qi Dou and Zhen Li and Guanbin Li and Xiang Wan},
-      year={2023},
-      eprint={2309.01111},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{du2023arsdm,
+  title={ArSDM: Colonoscopy Images Synthesis with Adaptive Refinement Semantic Diffusion Models},
+  author={Du, Yuhao and Jiang, Yuncheng and Tan, Shuangyi and Wu, Xusheng and Dou, Qi and Li, Zhen and Li, Guanbin and Wan, Xiang},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={339--349},
+  year={2023},
+  organization={Springer}
 }
 ```
