@@ -46,10 +46,10 @@ We provide pre-trained models for various configurations:
 
 | Ada. Loss | Refinement | Saved Epoch | Batch Size | GPU           | Link                                                                                                                                                  |                                      
 |-----------|------------|-------------|------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| x         | x          | 94          | 8          | 2 A100 (80GB) | [OneDrive](https://cuhko365-my.sharepoint.com/:u:/g/personal/118010053_link_cuhk_edu_cn/EUcEvfckWOFHtjGAjGNjQZIBrpggLNXiOm5dZL3lpgcx-w?e=F1bog8)      |
-| &#10004;  | x          | 100         | 8          | 1 A100 (80GB) | [OneDrive](https://cuhko365-my.sharepoint.com/:u:/g/personal/118010053_link_cuhk_edu_cn/EcPG7yBMUBRMjejlOv4QCSMBdHaT4hQ1HmnMRPhlXPf-jA?e=JlPkeR)      |
-| x         | &#10004;   | 2           | 8          | 1 A100 (80GB) | [OneDrive](https://cuhko365-my.sharepoint.com/:u:/g/personal/118010053_link_cuhk_edu_cn/EWQ0gnBeWNlKlGLgoku44tUB89U2df_HzjaYlXefV4TzQQ?e=28mKHO)      |
-| &#10004;  | &#10004;   | 3           | 8          | 1 A100 (80GB) | [OneDrive](https://cuhko365-my.sharepoint.com/:u:/g/personal/118010053_link_cuhk_edu_cn/EaRh_sxw4zVIq2sa_uNsnQ0BhKiihz2M2T0z67nkdj3y0Q?e=HIqY7n)      |  
+| x         | x          | 94          | 8          | 2 A100 (80GB) | [BaiduNetDisk](https://pan.baidu.com/s/1yt1wMjXsjSQ5t1GC33_oKg?pwd=fgn5)      |
+| &#10004;  | x          | 100         | 8          | 1 A100 (80GB) | [BaiduNetDisk](https://pan.baidu.com/s/1dYqIRYpsOK1YgYsVsOoOug?pwd=8n3j)      |
+| x         | &#10004;   | 2           | 8          | 1 A100 (80GB) | [BaiduNetDisk](https://pan.baidu.com/s/1tTQZZmUEbT1xkffRyQg0UA?pwd=7sx6)      |
+| &#10004;  | &#10004;   | 3           | 8          | 1 A100 (80GB) | [BaiduNetDisk](https://pan.baidu.com/s/1Iuu91TXQsZJUnv0O5I2lIg?pwd=s5ge)      |  
 
 
 Download the pre-trained weights above or follow the [next section](#train-your-own-arsdms) to train your own models.
